@@ -1,0 +1,21 @@
+Reference:
+https://en.wikipedia.org/wiki/Erlang_(programming_language)
+https://www.tutorialspoint.com/erlang/index.htm
+https://en.wikibooks.org/wiki/Erlang_Programming
+https://www.erlang.org/
+http://erlang.org/faq/getting_started.html
+https://erlang.org/doc/man/escript.html
+https://pragprog.com/articles/erlang
+https://www.erlang-solutions.com/blog/which-companies-are-using-erlang-and-why-mytopdogstatus.html
+https://github.com/oreillymedia/erlang_programming
+
+To compile:
+
+	erl -compile helloworld
+
+To run the compiled version:
+	erl -noshell -s helloworld hello_world -s init stop
+
+To run the escript version (uses a shebang):
+
+	./helloworld

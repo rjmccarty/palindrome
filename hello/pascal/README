@@ -1,0 +1,13 @@
+Reference:
+https://www.freepascal.org/
+https://en.wikipedia.org/wiki/Pascal_(programming_language)
+https://en.wikipedia.org/wiki/Comparison_of_Pascal_and_C
+https://wiki.freepascal.org/Why_use_Pascal
+https://www.lysator.liu.se/c/bwk-on-pascal.html
+https://stackoverflow.com/questions/44848371/is-free-pascal-a-programming-language-by-itself-or-just-a-compiler-supporting/44848455
+https://web.mit.edu/humor/Computers/real.programmers
+https://gigi.nullneuron.net/comp/pascal.htm
+
+To build:
+
+fpc helloworld.pas

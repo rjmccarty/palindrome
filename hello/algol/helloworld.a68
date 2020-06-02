@@ -1,0 +1,2 @@
+#! /usr/bin/a68g #
+printf(($gl$, "Hello, World!"))

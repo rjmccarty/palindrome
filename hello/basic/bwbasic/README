@@ -1,0 +1,11 @@
+Reference:
+http://www.dignus.com/freebies/bwbasic.txt
+http://purple.niagara.edu/boxer/essays/soft/bwbasic.htm
+
+To run:
+
+bwbasic helloworld.bas
+
+To run as a shell command:
+
+./helloworld.sh

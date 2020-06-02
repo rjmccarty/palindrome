@@ -1,0 +1,15 @@
+Reference:
+https://cs.lmu.edu/~ray/notes/nasmtutorial/
+https://en.wikipedia.org/wiki/Netwide_Assembler
+https://en.wikibooks.org/wiki/X86_Assembly/NASM_Syntax
+https://www.nasm.us/
+https://www.cs.uaf.edu/2006/fall/cs301/support/x86/
+https://jameshfisher.com/2018/03/10/linux-assembly-hello-world/
+http://asm.sourceforge.net/intro/hello.html
+https://riptutorial.com/assembly/example/10682/hello-world-for-linux-x86-64--intel-64-bit-
+
+To assemble and run:
+
+nasm -f elf64 -o helloworld.o helloworld.s
+ld -o helloworld helloworld.o
+./helloworld

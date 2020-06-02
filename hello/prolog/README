@@ -1,0 +1,18 @@
+Reference:
+https://en.wikipedia.org/wiki/Prolog
+https://www.cis.upenn.edu/~matuszek/Concise%20Guides/Concise%20Prolog.html
+http://www.cse.unsw.edu.au/~billw/cs9414/notes/prolog/intro.html
+https://cseweb.ucsd.edu/~goguen/courses/130w04/prolog.html
+https://stackoverflow.com/questions/20447974/prolog-programming-in-ubuntu
+https://www.swi-prolog.org/download/stable/doc/SWI-Prolog-7.2.3.pdf
+https://arxiv.org/pdf/1011.5332.pdf
+https://www.cs.toronto.edu/~bonner/courses/2016f/csc324/handouts/usingSWIprolog.txt
+https://www.cpp.edu/~jrfisher/www/prolog_tutorial/1.html
+
+To run:
+
+   swipl helloworld.pro
+
+OR (because there is a shebang in the file):
+
+   ./helloworld.pro
