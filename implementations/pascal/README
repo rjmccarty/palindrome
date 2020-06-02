@@ -1,0 +1,5 @@
+(Free Pascal installed on system I ran this on.)
+
+Example to build with object oriented Pascal mode:
+
+fpc -Mobjfpc palindrome.pas

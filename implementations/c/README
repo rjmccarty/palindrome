@@ -1,0 +1,11 @@
+This is a reference implementation of the palindrome program.
+
+(Built using Gnu C.)
+
+To build:
+
+cc -o palindrome palindrome.c
+
+To run and save output to a file:
+
+./palindrome ../testfile.txt > testfile.out

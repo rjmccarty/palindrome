@@ -1,0 +1,16 @@
+Reference:
+https://www.thegeekstuff.com/2009/12/lisp-hello-world-example-how-to-write-and-execute-lisp-program-on-linux-os/
+https://en.wikipedia.org/wiki/Common_Lisp
+https://filonenko-mikhail.github.io/cltl2-doc/enpdf/cltl2.pdf
+https://common-lisp.net/
+https://lisp-lang.org/
+http://www.sbcl.org/
+http://www.gigamonkeys.com/book/
+https://www.cs.cmu.edu/~dst/LispBook/book.pdf
+http://bitsavers.trailing-edge.com/pdf/mit/cadr/chinual_6thEd_Jan84/
+
+Ran this using Steel Bank Common Lisp. No build step needed - see
+first reference above. IMPORTANT: The first reference refers to using
+/usr/bin/clisp in a shebang. Instead use:
+
+       /usr/bin/sbcl --script

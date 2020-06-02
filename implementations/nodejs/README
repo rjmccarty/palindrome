@@ -1,0 +1,17 @@
+Updating node:
+
+https://www.hostingadvice.com/how-to/update-node-js-latest-version/
+
+(Node 12 installed on system where I ran this.)
+
+To run:
+
+palindrome.js has a shebang in it and can be simply run interpretively by directly executing the file:
+
+./palindrome.js
+
+The file can also be renamed to simply "palindrome", or a symlink can
+be created so the .js extension isn't need to run it. To create a
+symlink:
+
+    ln -s palindrome.js palindrome

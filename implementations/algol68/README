@@ -1,0 +1,20 @@
+Reference:
+https://jmvdveer.home.xs4all.nl/learning-algol-68-genie.pdf
+http://www.nunan.myzen.co.uk/algol68/pame.pdf
+https://www.whoishostingthis.com/resources/algol/
+http://manpages.ubuntu.com/manpages/bionic/man1/a68g.1.html
+http://www.algol68.org/
+
+To run:
+
+palindrome.a68 has a shebang in it and can be simply run interpretively by directly executing the file:
+
+./palindrome.a68
+
+The file can also be renamed to simply "palindrome", or a symlink can be created so the .a68 extension isn't need to run it. To create a symlink:
+
+    ln -s palindrome.a68 palindrome
+
+An optimized version can be created with the following:
+
+   a68g -O ./palindrome.a68

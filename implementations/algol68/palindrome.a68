@@ -1,0 +1,160 @@
+#! /usr/bin/a68g --script #
+
+main: (
+  STRING instring, infilename, firstname, lastname, fnispalindrome, lnispalindrome;
+  FILE fd;
+  INT firstch, lastch, length, instringlength, errno, recsprocessed, maxrecords;
+  FORMAT input format = $gl$;
+  FORMAT output format = $b("YES"," NO") ," ", %-25s, " ", b("YES"," NO"), " ", %-25s, l$;
+
+  PROC trim trailing whitespace = (STRING instring) STRING:
+  BEGIN
+    INT position := UPB instring;
+    WHILE
+      IF position < LWB instring THEN
+        FALSE
+      ELSE
+        instring[position] <= " "
+      FI
+    DO
+      position -:= 1
+    OD;
+ 
+    instring[: position]
+  END;
+
+  PROC getname = (STRING str, INT firstpos, INT maxlength) STRING:
+  BEGIN
+    INT strlength, lastpos;
+
+    strlength := UPB str;
+    lastpos := firstpos + maxlength - 1;
+
+    IF lastpos > strlength THEN
+      lastpos := strlength
+    FI;
+    
+    trim trailing whitespace(str[firstpos : lastpos])
+  END;
+
+  PROC to upper = (CHAR c) CHAR:
+  BEGIN
+    INT lower2upper = ABS "A" - ABS "a";
+    (ABS "a" > ABS c | c |: ABS c > ABS "z" | c | REPR ( ABS c + lower2upper ))
+  END;
+
+  PROC str2upper = (REF STRING str) VOID:
+  BEGIN
+    FOR i FROM LWB str TO UPB str
+    DO
+      str[i] := to upper(str[i])
+    OD
+  END;
+
+  PROC ispalindrome = (STRING instring) BOOL:
+  BEGIN
+    # Have to make a copy for the call by reference to work. #
+    STRING str := instring;
+    str2upper(str);
+
+    IF LWB str >= UPB str THEN
+      TRUE
+    ELIF str[LWB str] /= str[UPB str] THEN
+      FALSE
+    ELSE
+      ispalindrome(str[LWB str + 1 : UPB str - 1])
+    FI
+  END;
+
+  PROC printargs = VOID:
+  BEGIN
+    FOR i TO argc DO
+      printf(($"Argument "g(-0)": "gl$, i, argv(i)))
+    OD
+  END;
+
+  PROC getfilename = STRING:
+  BEGIN
+#    STRING default = "../../testfile.txt"; #
+    STRING default = "STDIN";
+
+    IF argc >= 4 THEN
+      argv(4)
+    ELSE
+      default
+    FI
+  END;
+
+  PROC checkargs = VOID:
+  BEGIN
+    IF argc > 5 THEN
+      print("ERROR: Too many arguments.");
+#      done #
+      stop
+    FI
+  END;
+
+  PROC getmaxrecords = INT:
+  BEGIN
+    IF argc >= 5 THEN
+      getnumber(argv(5))
+    ELSE
+      0
+    FI
+  END;
+
+  PROC getnumber = (STRING instr) INT:
+  BEGIN
+    STRING str;
+
+    # Have to make a copy for the association to work. #
+    str := instr;
+    FILE f;
+    INT x;
+    associate(f, str);
+    get(f,x);
+    close(f);
+    x
+  END;
+
+#  printargs; #
+
+  length := 25; 
+  checkargs;
+
+#  printf(($"Filename: ", g, l$, getfilename)); #
+#  printf(($"Maxrecords: ", g, l$, getmaxrecords)); #
+
+  infilename := getfilename;
+
+  IF infilename = "STDIN" THEN
+    fd := standin
+  ELSE
+    IF open(fd, infilename, stand in channel) /= 0 THEN
+      print(("ERROR: Cannot open '", getfilename, "'", new line));
+#      done #
+      stop
+    FI
+  FI;
+  
+  on logical file end(fd, (REF FILE skip) BOOL: done);
+
+  recsprocessed := 0;
+  maxrecords := getmaxrecords;
+
+  WHILE TRUE DO
+    IF (maxrecords > 0) & (recsprocessed = maxrecords) THEN
+      done
+    FI;
+    
+    getf(fd, (input format, instring));
+    firstname := getname(instring, 1, length);
+    lastname := getname(instring, 26, length);
+    printf((output format, ispalindrome(firstname), firstname, ispalindrome(lastname), lastname));
+    recsprocessed +:= 1    
+  OD;
+  done: SKIP;
+
+#  printf(($"Records Processed: ", g(0), l$, recsprocessed)); #
+  SKIP
+)

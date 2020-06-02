@@ -1,0 +1,209 @@
+Welcome to the "Aging Like a Fine Wine" programming challenge!
+
+Objective:
+	The objective is to get some experience with a few
+	vintage programming languages, many of which have had
+	significant influence on modern languages. And hopefully have
+	some fun in the process!
+
+The Challenge:
+
+	Using a reference implementation of a palindrome checker
+	program as an example, choose one (or more) of the following
+	vintage languages and reimplement it:
+
+		Algol68
+		Assembler (X86)
+		Basic
+		COBOL
+		Erlang
+		Fortran
+		Lisp
+		Pascal
+		Prolog
+
+	Note that the above includes what I personally consider to be
+	the "Big 4" most influential languages ever - COBOL, Fortran,
+	Algol, and Lisp. Of these, Algol may be the most influential
+	of all, but each has had tremendous impact in its own way.
+
+	There are other important languages which are not on the list
+	but are notable, including:
+
+		Ada
+		APL
+		MATLAB
+		Modula
+		PL/1
+		REXX
+		RPG
+		Simula (might be an appropriate addition to my "Big 4")
+		Smalltalk
+		SNOBOL
+		SQL
+
+	Another side note - several of these languages were created by
+	IBM, including APL, Fortran, PL/1, RPG, and REXX.
+
+	You may wonder why C isn't in the list, as it certainly fits
+	into the "vintage" programming language category (albeit C appears
+	to have recently retaken the lead as the number one used language
+	today.). The reason it isn't there is because the reference
+	implementation for this challenge is written in C!
+
+	In this directory you will notice the following:
+
+		drwxrwxr-x 11 4096 hello
+		drwxrwxr-x  2 4096 palindrome
+		-rw-rw-r--  1  963 README
+		-rw-rw-r--  1  362 testfile.txt
+
+	The "hello" directory contains "Hello, world" examples for the
+	above languages, along with README files containing
+	information on how to run them and links to useful references
+	for each language.
+
+	The "palindrome" directory contains the reference
+	implementation in C.
+	
+	README (this file)
+
+	"testfile.txt" contains the input dataset used by the
+	reference implementation and what you will need to use as the
+	input for the implementation in your chosen language.
+	
+Data Formats:
+
+	INPUT:
+		Each line of the input file contains 25 character wide
+		first and last name fields, left justified and blank
+		(space) filled. For example (the numbers are for
+		reference showing the field widths):
+
+		012345678900123456789001234501234567890123456789012345
+		Joe                         Smith
+
+	OUTPUT:
+		Each first and last name is written to stdout with an
+		indication whether the field is a palindrome, in the
+		following format:
+
+		01234567890012345678900123450123456789012345678901234567890
+		xxx xxxxxxxxxxxxxxxxxxxxxxxxx xxx xxxxxxxxxxxxxxxxxxxxxxxxx
+
+		as in these examples:
+
+		01234567890012345678900123450123456789012345678901234567890
+		 NO Fred                      YES Laval
+		YES Hannah                    YES Hamamah                  
+		YES Nan                        NO Nanunanu
+
+	NOTE:
+		The palindrome check is case-insensitive.
+
+Judging:
+
+	No winners or losers in this, but we will select honorable
+	mentions in the following categories:
+
+	- Most "stylish" implementation.
+	- Most "ambitious" implementation.
+	- The "OMG, I can't believe this works" implementation.
+	- Most likely to win an obfuscated code contest implementation.
+
+The Fine Print:
+
+	- While I wouldn't consider the functionality here very
+          complex, sorting out the appropriate constructs of the
+          chosen language, etc may require
+          research/experimentation. So this is more than a 1 hour
+          exercise - we'll give this 2 weeks (until May 22).
+	
+	- You may work on an implementation individually or team up
+          with someone else (i.e. team of 2).
+
+	- For this exercise, forget about github, etc. We're time
+          traveling to the old days when those things didn't exist!
+
+	- You can choose any of these languages:
+
+		Algol68
+		Assembler (X86)
+		Basic
+		COBOL
+		Erlang
+		Fortran
+		Lisp
+		Pascal
+		Prolog
+		
+		(I don't recommend trying to tackle assembly, though
+		the hello world example may be interesting to look at
+		and try. But if someone does create a working assembly
+		implementation I'll put up a gift card at a nice
+		restaurant.)
+
+	- Hopefully not everyone will choose the same language, right? :-)
+	
+	- You must do your development on the shared system
+          provided. (This to assure a level playing field. And of
+          course to experience what it used to be like before
+          workstations and IDEs were invented. ;-) )
+	  
+	- You must demonstrate the implementation on the shared
+          system.
+
+	- You can tackle more than one language if you'd like. If you
+          do, brownie points will certainly be awarded.
+
+	Your implementation must:
+
+	- work. ;-)
+	- use the input file in the format provided.
+	- write its output in the same exact format as the reference implementation.
+	- write output to stdout.
+	- perform a case-insensitive palindrome check.
+	- accept a command line option/parameter which allows specifying the number
+	  of records to be processed. A value of 0 should mean all records. The
+	  default should also be all records.
+	- accept a command line parameter with the name of the input file to be
+	  processed.
+
+	You should (if possible), but don't strictly need to:
+
+	- accept and process options/parameters in the same way as the reference
+	  program. 
+	- read input from stdin if an input filename parameter is not provided.
+	- comment your code well.
+	- in your code comments, point out things of interest that you may have
+	  discovered while writing it.
+
+Tools:
+	- Compilers/interpreters for all of the languages are
+          installed on the shared system.
+	
+	- Editors: vi, nano and emacs are all available. I recommend
+          at least using nano, and if you'd like something more
+          powerful, emacs is a good option (it was originally created
+          for programming). And if someone writes their code using ed,
+          I'll bow to them. :-)
+
+	- Since you're working on a remote system, remember to save
+          often and make backup/checkpoint copies.
+
+Getting the Reference Implementation and Sample Code:
+
+	1) ssh into the shared system, tomaszvm.torolab.ibm.com.
+	2) Execute the following command:
+
+		tar -zxvf ~rmccarty/working/langFun_final.tar,gz
+
+	This will create a directory named "langFun". cd into the
+	directory and get started.
+	
+References:
+
+	https://en.wikipedia.org/wiki/History_of_programming_languages
+	https://en.wikipedia.org/wiki/Timeline_of_programming_languages
+	http://www.aistudy.com/program/images/programming_language_family_tree.gif
+	http://www.digibarn.com/collections/posters/tongues/tongues.jpg

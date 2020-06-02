@@ -1,0 +1,11 @@
+Reference:
+https://www.thegeekstuff.com/2009/11/fortran-hello-world-example-how-to-write-and-execute-fortran-program-on-linux-os/
+https://seriouscomputerist.atariverse.com/media/pdf/book/Elements%20of%20Programming%20Style.pdf
+https://en.wikibooks.org/wiki/Fortran/Beginning_Fortran
+http://people.cs.vt.edu/~asandu/Courses/MTU/CS2911/fortran_notes/node4.html
+
+(Used Gnu Fortran to compile this.)
+
+The palindrome.f source is in free-form Fortran. To compile:
+
+gfortran -ffree-form -o palindrome palindrome.f

@@ -1,0 +1,14 @@
+Reference:
+https://www.thegeekstuff.com/2010/02/cobol-hello-world-example-how-to-write-compile-and-execute-cobol-program-on-linux-os/
+https://en.wikipedia.org/wiki/COBOL
+https://en.wikipedia.org/wiki/GnuCOBOL
+https://www.tutorialspoint.com/cobol/index.htm
+https://devops.com/the-beauty-of-the-cobol-programming-language-v2/
+https://open-cobol.sourceforge.io/
+https://www.infoworld.com/article/3539057/what-is-cobol-cobol-programming-explained.html
+
+(Built using Open Cobol, which is now Gnu Cobol.)
+
+To build:
+
+cobc -free -x -o palindrome palindrome.cob

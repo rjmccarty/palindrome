@@ -1,0 +1,11 @@
+(Built using Gnu C++.)
+
+This is a C++ implementation of the palindrome program.
+
+To build:
+
+c++ -o palindrome palindrome.cpp
+
+To run and save output to a file:
+
+./palindrome ../testfile.txt > testfile.out
