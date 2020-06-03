@@ -1,0 +1,24 @@
+Solutions are here for the following languages:
+
+C
+C++
+Lisp
+Fortran
+Cobol
+Pascal
+Algol68
+Go
+JavaScript (Node)
+
+(I added C++, Go and JavaScript as a bonus, even though they don't
+exactly fit into the vintage language category.)
+
+Was an interesting exercise. I learned a few things. One being
+surprised how short the Cobol version was. Another was confirming my
+lack of enthusiasm for C++. Another was confirming my enthusiasm for
+Go and Lisp. I also found Pascal to be enjoyable, while Algol was less
+than satisfying.
+
+I also started working on Erlang and Prolog, but quickly decided to
+give up while I was ahead. There are some file reading examples there
+in case anyone would like to take those on.
