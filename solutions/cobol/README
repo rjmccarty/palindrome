@@ -11,4 +11,7 @@ https://www.infoworld.com/article/3539057/what-is-cobol-cobol-programming-explai
 
 To build:
 
+cobc -free -c palindrome_sub.cob
 cobc -free -x -o palindrome palindrome.cob
+
+(The linker will automagically find palindrome_sub.o and include it.)
