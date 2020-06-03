@@ -54,7 +54,7 @@ The Challenge:
 	In this directory you will notice the following:
 
 		drwxrwxr-x 11 4096 hello
-		drwxrwxr-x  2 4096 palindrome
+		drwxrwxr-x  2 4096 implementations
 		-rw-rw-r--  1  963 README
 		-rw-rw-r--  1  362 testfile.txt
 
@@ -88,12 +88,12 @@ Data Formats:
 		indication whether the field is a palindrome, in the
 		following format:
 
-		01234567890012345678900123450123456789012345678901234567890
+		01234567890123456789012345012345678901234567890123456789012
 		xxx xxxxxxxxxxxxxxxxxxxxxxxxx xxx xxxxxxxxxxxxxxxxxxxxxxxxx
 
 		as in these examples:
 
-		01234567890012345678900123450123456789012345678901234567890
+		01234567890123456789012345012345678901234567890123456789012
 		 NO Fred                      YES Laval
 		YES Hannah                    YES Hamamah                  
 		YES Nan                        NO Nanunanu
@@ -178,29 +178,6 @@ The Fine Print:
 	- in your code comments, point out things of interest that you may have
 	  discovered while writing it.
 
-Tools:
-	- Compilers/interpreters for all of the languages are
-          installed on the shared system.
-	
-	- Editors: vi, nano and emacs are all available. I recommend
-          at least using nano, and if you'd like something more
-          powerful, emacs is a good option (it was originally created
-          for programming). And if someone writes their code using ed,
-          I'll bow to them. :-)
-
-	- Since you're working on a remote system, remember to save
-          often and make backup/checkpoint copies.
-
-Getting the Reference Implementation and Sample Code:
-
-	1) ssh into the shared system, tomaszvm.torolab.ibm.com.
-	2) Execute the following command:
-
-		tar -zxvf ~rmccarty/working/langFun_final.tar,gz
-
-	This will create a directory named "langFun". cd into the
-	directory and get started.
-	
 References:
 
 	https://en.wikipedia.org/wiki/History_of_programming_languages
