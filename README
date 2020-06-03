@@ -54,7 +54,7 @@ The Challenge:
 	In this directory you will notice the following:
 
 		drwxrwxr-x 11 4096 hello
-		drwxrwxr-x  2 4096 implementations
+		drwxrwxr-x  2 4096 solutions
 		-rw-rw-r--  1  963 README
 		-rw-rw-r--  1  362 testfile.txt
 
@@ -63,7 +63,7 @@ The Challenge:
 	information on how to run them and links to useful references
 	for each language.
 
-	The "palindrome" directory contains the reference
+	The "solutions" directory contains the reference
 	implementation in C.
 	
 	README (this file)
@@ -80,8 +80,8 @@ Data Formats:
 		(space) filled. For example (the numbers are for
 		reference showing the field widths):
 
-		012345678900123456789001234501234567890123456789012345
-		Joe                         Smith
+		01234567890123456789012345012345678901234567890123
+		Joe                      Smith                   
 
 	OUTPUT:
 		Each first and last name is written to stdout with an
@@ -94,9 +94,9 @@ Data Formats:
 		as in these examples:
 
 		01234567890123456789012345012345678901234567890123456789012
-		 NO Fred                      YES Laval
+		 NO Fred                      YES Laval                   
 		YES Hannah                    YES Hamamah                  
-		YES Nan                        NO Nanunanu
+		YES Nan                        NO Nanunanu                
 
 	NOTE:
 		The palindrome check is case-insensitive.
